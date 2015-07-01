@@ -10,7 +10,7 @@ pywb is a web archive replay and live web proxy rewriting system.
 To run a container of this image:
 
 ```
-docker run -it ikeymer/pywb
+docker run -it ikreymer/pywb
 ```
 
 This will start pywb with a live web proxy configured at `http://[DOCKER_HOST]:8080/live/`
@@ -26,10 +26,10 @@ and store it in a Docker volume, mapped to local `/path/to/my_collection/`
 
 ```
 # Init Collection 'test'
-docker run -it -v /path/to/collection:/webarchive ikeymer/pywb wb-manager init test
+docker run -it -v /path/to/collection:/webarchive ikreymer/pywb wb-manager init test
 
 # Add warc to collection 'test'
-docker run -it -v /path/to/collection:/webarchive -v /path/to/mywarc/:/warcs/ ikeymer/pywb wb-manager init add /warcs/warc_file.warc.gz`
+docker run -it -v /path/to/collection:/webarchive -v /path/to/mywarc/:/warcs/ ikreymer/pywb wb-manager init add /warcs/warc_file.warc.gz`
 
 # run pywb
 docker run -it -p 8080:8080 -v /path/to/collection:/webarchive ikreymer/pywb
