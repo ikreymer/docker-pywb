@@ -14,7 +14,7 @@ docker run -it ikreymer/pywb
 ```
 
 This will start pywb with a live web proxy configured at `http://[DOCKER_HOST]:8080/live/`
-For example, the live rewrite of `http://example.com/` can be viewed at `http://[DOCKER_HOST]:8080/live/http://example.com/'
+For example, the live rewrite of `http://example.com/` can be viewed at `http://[DOCKER_HOST]:8080/live/http://example.com/`
 
 
 ### Creating a Web Archive With Pywb
@@ -35,7 +35,7 @@ docker run -it -v /path/to/collection:/webarchive -v /path/to/mywarc/:/warcs/ ik
 docker run -it -p 8080:8080 -v /path/to/collection:/webarchive ikreymer/pywb
 ```
 
-The contents of the warc can now be browsed at `http://[DOCKER_HOST]:8080/test/[url]`
+The contents of the WARC can now be browsed by visiting `http://[DOCKER_HOST]:8080/test/[url]`
 
 
 The mapping to `/webarchive` volume can be omitted if the collection need not be accessed outside of Docker.
