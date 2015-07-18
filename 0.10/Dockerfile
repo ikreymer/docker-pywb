@@ -1,7 +1,7 @@
 FROM python:2.7
 MAINTAINER Ilya Kreymer <ikreymer at gmail.com>
 
-ENV VERSION 0.10.1
+ENV VERSION 0.10.2
 
 RUN pip install pywb==${VERSION} uwsgi gevent
 
