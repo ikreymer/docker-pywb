@@ -3,6 +3,8 @@ MAINTAINER Ilya Kreymer <ikreymer at gmail.com>
 
 ENV VERSION 0.10.5
 
+ENV UWSGI_INI /uwsgi/uwsgi.ini
+
 RUN pip install pywb==${VERSION} certauth youtube-dl boto uwsgi gevent
 
 RUN mkdir /uwsgi
@@ -19,4 +21,4 @@ WORKDIR /webarchive
 
 EXPOSE 8080
 
-CMD ["uwsgi", "/uwsgi/uwsgi.ini"]
+CMD uwsgi ${UWSGI_INI}
