@@ -1,7 +1,7 @@
 FROM python:2.7
 MAINTAINER Ilya Kreymer <ikreymer at gmail.com>
 
-ENV VERSION 0.10.8
+ENV VERSION 0.10.10
 
 RUN pip install pywb==${VERSION} certauth youtube-dl boto uwsgi gevent
 
